@@ -1,0 +1,114 @@
+<div class="pocket-tweaks-settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>⊹ POCKET TWEAKS ⊹</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down up interactable" tabindex="0" role="button"></div>
+        </div>
+        <div class="inline-drawer-content" style="display: none;">
+            <div class="pt_settings_card">
+                <p class="pt_settings_intro" data-i18n="settings.intro">Compact interface and chat workflow tweaks for SillyTavern.</p>
+
+                <div class="pt_settings_section">
+                    <h4 class="pt_settings_heading" data-i18n="settings.dockHeading">Chat &amp; Floating Dock</h4>
+                    <div class="pt_group_list">
+                        <label class="pt_set_row pt_set_toggle" for="pt_ooc_inject">
+                            <span class="pt_set_text">
+                                <span class="pt_set_label" data-i18n="settings.oocInject">OOC Inject</span>
+                                <span class="pt_set_desc" data-i18n="settings.oocInjectDesc">Persistent per-chat OOC instruction inside the floating dock.</span>
+                            </span>
+                            <input id="pt_ooc_inject" type="checkbox" />
+                        </label>
+
+                        <label class="pt_set_row pt_set_toggle" for="pt_chat_controls">
+                            <span class="pt_set_text">
+                                <span class="pt_set_label" data-i18n="settings.chatControls">Message actions</span>
+                                <span class="pt_set_desc" data-i18n="settings.chatControlsDesc">Quick controls for the last or second-to-last message in the dock.</span>
+                            </span>
+                            <input id="pt_chat_controls" type="checkbox" />
+                        </label>
+
+                        <label id="pt_dock_shy_row" class="pt_set_row pt_set_toggle pt_set_subrow" for="pt_dock_shy">
+                            <span class="pt_set_text">
+                                <span class="pt_set_label" data-i18n="settings.dockShy">Shy dock icon</span>
+                                <span class="pt_set_desc" data-i18n="settings.dockShyDesc">Keep the floating icon nearly invisible until hovered or tapped.</span>
+                            </span>
+                            <input id="pt_dock_shy" type="checkbox" />
+                        </label>
+
+                        <div id="pt_dock_reset_row" class="pt_set_row pt_set_action_row">
+                            <button id="pt_dock_reset" type="button" class="menu_button pt_reset_btn interactable">
+                                <i class="fa-solid fa-arrow-rotate-left" aria-hidden="true"></i>
+                                <span data-i18n="settings.dockReset">Reset dock position &amp; size</span>
+                            </button>
+                        </div>
+
+                        <label class="pt_set_row pt_set_toggle" for="pt_jump_bottom">
+                            <span class="pt_set_text">
+                                <span class="pt_set_label" data-i18n="settings.jumpBottom">Jump-to-bottom arrow</span>
+                                <span class="pt_set_desc" data-i18n="settings.jumpBottomDesc">Show a scroll-down button at the chat corner when scrolled up.</span>
+                            </span>
+                            <input id="pt_jump_bottom" type="checkbox" />
+                        </label>
+                    </div>
+                </div>
+
+                <div class="pt_settings_section">
+                    <h4 class="pt_settings_heading" data-i18n="settings.avatarHeading">Character Avatars</h4>
+                    <div class="pt_group_list">
+                        <label class="pt_set_row pt_set_toggle" for="pt_avatar_crop">
+                            <span class="pt_set_text">
+                                <span class="pt_set_label" data-i18n="settings.avatarCrop">Avatar crop menu</span>
+                                <span class="pt_set_desc" data-i18n="settings.avatarCropDesc">Custom crop dialog and Crop Avatar action for characters.</span>
+                            </span>
+                            <input id="pt_avatar_crop" type="checkbox" />
+                        </label>
+
+                        <label id="pt_crop_on_upload_row" class="pt_set_row pt_set_toggle pt_set_subrow" for="pt_crop_on_upload">
+                            <span class="pt_set_text">
+                                <span class="pt_set_label" data-i18n="settings.cropOnUpload">Crop on upload</span>
+                                <span class="pt_set_desc" data-i18n="settings.cropOnUploadDesc">Open the crop editor before saving a newly selected avatar.</span>
+                            </span>
+                            <input id="pt_crop_on_upload" type="checkbox" />
+                        </label>
+                    </div>
+                </div>
+
+                <div class="pt_settings_section">
+                    <h4 class="pt_settings_heading" data-i18n="settings.editorHeading">Editors</h4>
+                    <div class="pt_group_list">
+                        <label class="pt_set_row pt_set_toggle" for="pt_prompt_maximize">
+                            <span class="pt_set_text">
+                                <span class="pt_set_label" data-i18n="settings.promptMaximize">Prompt editor maximize</span>
+                                <span class="pt_set_desc" data-i18n="settings.promptMaximizeDesc">Add an expand button next to the Prompt field.</span>
+                            </span>
+                            <input id="pt_prompt_maximize" type="checkbox" />
+                        </label>
+
+                        <label class="pt_set_row pt_set_toggle" for="pt_prompt_actions">
+                            <span class="pt_set_text">
+                                <span class="pt_set_label" data-i18n="settings.promptActions">Prompt row actions</span>
+                                <span class="pt_set_desc" data-i18n="settings.promptActionsDesc">Duplicate or delete a custom prompt directly from its row.</span>
+                            </span>
+                            <input id="pt_prompt_actions" type="checkbox" />
+                        </label>
+
+                        <label class="pt_set_row pt_set_toggle" for="pt_greetings">
+                            <span class="pt_set_text">
+                                <span class="pt_set_label" data-i18n="settings.greetings">Polish alternate greetings</span>
+                                <span class="pt_set_desc" data-i18n="settings.greetingsDesc">Browse greetings by their opening lines and expand them to edit.</span>
+                            </span>
+                            <input id="pt_greetings" type="checkbox" />
+                        </label>
+                        <label class="pt_set_row pt_set_toggle" for="pt_compare">
+                            <span class="pt_set_text">
+                                <span class="pt_set_label" data-i18n="settings.compare">Preview card replacements</span>
+                                <span class="pt_set_desc" data-i18n="settings.compareDesc">Compare character text before replacing a card from PNG or JSON.</span>
+                            </span>
+                            <input id="pt_compare" type="checkbox" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
